@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MakiTours - Unutulmaz seyahatler ve özel tur deneyimleri.">
+  <title>MakiTours | Seyahat Acentası</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #172033;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: 800;
+      color: #0b63ce;
+    }
+
+    .logo span {
+      color: #ff8a00;
+    }
+
+    nav a {
+      color: #172033;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero {
+      min-height: 72vh;
+      padding: 90px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      background:
+        linear-gradient(rgba(0,40,90,.62), rgba(0,40,90,.55)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      max-width: 700px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 19px;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      width: fit-content;
+      background: #ff8a00;
+      color: white;
+      text-decoration: none;
+      padding: 14px 25px;
+      border-radius: 9px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #667085;
+      margin-bottom: 38px;
+    }
+
+    .tours {
+      background: #f5f8fc;
+    }
+
+    .tour-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .tour-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 22px rgba(0,0,0,.08);
+    }
+
+    .tour-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .tour-info {
+      padding: 20px;
+    }
+
+    .tour-info h3 {
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .tour-info p {
+      color: #667085;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #0b63ce;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .about {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p {
+      color: #596579;
+      font-size: 17px;
+    }
+
+    .contact {
+      background: #092b54;
+      color: white;
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 10px 0 25px;
+      color: #dbe7f5;
+    }
+
+    footer {
+      background: #061d38;
+      color: #b8c5d6;
+      text-align: center;
+      padding: 22px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      header {
+        padding: 15px 5%;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 68vh;
+        padding: 70px 7%;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .tour-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Maki<span>Tours</span></div>
+
+  <nav>
+    <a href="#anasayfa">Ana Sayfa</a>
+    <a href="#turlar">Turlar</a>
+    <a href="#hakkimizda">Hakkımızda</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+</header>
+
+<section class="hero" id="anasayfa">
+  <h1>Dünyayı MakiTours ile keşfet.</h1>
+
+  <p>
+    Özenle seçilmiş destinasyonlar, unutulmaz seyahatler
+    ve size özel tur deneyimleri.
+  </p>
+
+  <a class="button" href="#turlar">Turları Keşfet</a>
+</section>
+
+<section class="tours" id="turlar">
+
+  <h2 class="section-title">Popüler Turlarımız</h2>
+  <p class="section-subtitle">
+    Yeni rotalar ve unutulmaz deneyimler seni bekliyor.
+  </p>
+
+  <div class="tour-grid">
+
+    <div class="tour-card">
+      <img
+        src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=900&q=80"
+        alt="Paris turu">
+
+      <div class="tour-info">
+        <h3>Paris Turu</h3>
+        <p>Şehrin en güzel noktalarını keşfet.</p>
+        <div class="price">Yakında</div>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <img
+        src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80"
+        alt="İstanbul turu">
+
+      <div class="tour-info">
+        <h3>İstanbul Turu</h3>
+        <p>Tarih, kültür ve eşsiz Boğaz manzarası.</p>
+        <div class="price">Yakında</div>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <img
+        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+        alt="Dubai turu">
+
+      <div class="tour-info">
+        <h3>Dubai Turu</h3>
+        <p>Modern şehrin benzersiz atmosferini yaşa.</p>
+        <div class="price">Yakında</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="hakkimizda">
+  <div class="about">
+    <h2 class="section-title">MakiTours Hakkında</h2>
+
+    <p>
+      MakiTours, seyahati sadece bir yolculuk değil,
+      unutulmaz bir deneyim haline getirmeyi amaçlayan
+      bir seyahat acentasıdır. Misafirlerimize özenle
+      hazırlanmış tur seçenekleri ve güvenilir hizmet
+      sunmayı hedefliyoruz.
+    </p>
+  </div>
+</section>
+
+<section class="contact" id="iletisim">
+  <h2 class="section-title">Hayalindeki Yolculuğa Başla</h2>
+
+  <p>
+    Tur seçenekleri ve rezervasyon hakkında bilgi almak için
+    bizimle iletişime geç.
+  </p>
+
+  <a class="button" href="mailto:info@makitours.com">
+    Bize Ulaş
+  </a>
+</section>
+
+<footer>
+  © 2026 MakiTours · Tüm hakları saklıdır.
+</footer>
+
+</body>
+</html>
